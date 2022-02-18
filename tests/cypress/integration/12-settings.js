@@ -69,7 +69,7 @@ describe('[Api Settings Change]', () => {
 			// the page needs a refresh to show the changes in the client
 			mainContent.sendMessage('Message for Message Edit Block');
 			mainContent.openMessageActionMenu();
-			mainContent.messageEdit.should('not.be.visible');
+			mainContent.messageEdit.should('not.exist');
 		});
 
 		it('it should change the message editing via api', (done) => {
@@ -104,7 +104,7 @@ describe('[Api Settings Change]', () => {
 			// the page needs a refresh to show the changes in the client
 			mainContent.sendMessage('Message for Message delete Block');
 			mainContent.openMessageActionMenu();
-			mainContent.messageDelete.should('not.be.visible');
+			mainContent.messageDelete.should('not.exist');
 		});
 
 		it('it should change the message deleting via api', (done) => {
@@ -137,7 +137,7 @@ describe('[Api Settings Change]', () => {
 
 		it.skip('it should not show the audo file button', () => {
 			// the page needs a refresh to show the changes in the client
-			mainContent.recordBtn.should('not.be.visible');
+			mainContent.recordBtn.should('not.exist');
 		});
 
 		it('it should change the message audio files via api', (done) => {
@@ -246,14 +246,14 @@ describe('[Api Settings Change]', () => {
 
 		it.skip('it should not show the pinned tab button', () => {
 			// the page needs a refresh to show the changes in the client
-			flexTab.pinnedTab.should('not.be.visible');
+			flexTab.pinnedTab.should('not.exist');
 		});
 
 		it.skip('it should not show the pin message action', () => {
 			// the page needs a refresh to show the changes in the client
 			mainContent.sendMessage('Message for Message pin Block');
 			mainContent.openMessageActionMenu();
-			mainContent.pinMessage.should('not.be.visible');
+			mainContent.pinMessage.should('not.exist');
 		});
 
 		it('it should change the message pin via api', (done) => {
@@ -286,14 +286,14 @@ describe('[Api Settings Change]', () => {
 
 		it.skip('it should not show the starred tab button', () => {
 			// the page needs a refresh to show the changes in the client
-			flexTab.starredTab.should('not.be.visible');
+			flexTab.starredTab.should('not.exist');
 		});
 
 		it.skip('it should not show the star message action', () => {
 			// the page needs a refresh to show the changes in the client
 			mainContent.sendMessage('Message for Message pin Block');
 			mainContent.openMessageActionMenu();
-			mainContent.starMessage.should('not.be.visible');
+			mainContent.starMessage.should('not.exist');
 		});
 
 		it('it should change the message star via api', (done) => {
@@ -325,7 +325,7 @@ describe('[Api Settings Change]', () => {
 		});
 
 		it('it should not show file upload icon', () => {
-			mainContent.fileAttachment.should('not.be.visible');
+			mainContent.fileAttachment.should('not.exist');
 		});
 
 		it('it should change the file upload via api', (done) => {
@@ -367,7 +367,7 @@ describe('[Api Settings Change]', () => {
 			});
 
 			it('it should not show profile link', () => {
-				sideNav.profile.should('not.be.visible');
+				sideNav.profile.should('not.exist');
 			});
 
 			it('it should change the allow user profile change via api', (done) => {
@@ -399,7 +399,7 @@ describe('[Api Settings Change]', () => {
 			});
 
 			it('it should not show avatar link', () => {
-				sideNav.avatar.should('not.be.visible');
+				sideNav.avatar.should('not.exist');
 			});
 
 			it('it should change the allow user avatar change via api', (done) => {
